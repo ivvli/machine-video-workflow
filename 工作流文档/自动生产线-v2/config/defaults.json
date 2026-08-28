@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "workflow_mode": "shadow_v2_3",
+  "trigger": "开始",
+  "platforms": ["抖音"],
+  "video": {
+    "editor": "framefield_final_presentation",
+    "editing_tool_policy": "any_local_tool_except_forbidden",
+    "forbidden_editors": ["chatcut"],
+    "framefield_final_presentation_required": true,
+    "framefield_project_switching_required": true,
+    "framefield_project_subdirectory": "framefield",
+    "shadow_api_port": 4318,
+    "shadow_web_port": 3001,
+    "auto_open_after_edit_script_approval": true,
+    "keep_framefield_session_alive_during_editing": true,
+    "require_exact_project_path_match": true,
+    "prewarm_used_video_proxies": true,
+    "proxy_prewarm_workers": 2,
+    "require_revision_matched_readiness_reports": true,
+    "ratio": "9:16",
+    "resolution": "2160x3840",
+    "fps": 30,
+    "target_duration_seconds": [15, 20]
+  },
+  "confirmations": ["copy", "voice", "edit_script", "upload", "cover", "manual_publish"],
+  "preflight": {
+    "required": true,
+    "check_framefield_ports": true,
+    "check_python_pillow": true,
+    "check_browser_file_upload": true,
+    "check_douyin_login_and_account": true
+  },
+  "copy": {
+    "preferred_chinese_characters": [55, 75],
+    "hard_max_chinese_characters": 85,
+    "hook_max_chinese_characters": 18,
+    "minimum_compression_ratio": 0.25
+  },
+  "voice": {
+    "provider": "voxcpm2_then_cosyvoice3",
+    "mode": "full_performance_then_voice_conversion",
+    "performance_model": "VoxCPM2",
+    "conversion_model": "Fun-CosyVoice3-0.5B-2512",
+    "conversion_api": "inference_vc",
+    "generation_mode": "single_full_script",
+    "reference_voice": "视频工作区/7.28.1仿刺绣/voice/reference_master.wav",
+    "validated_example": "8.13仿刺绣_v2去掉多字_本人音色_可试听.wav",
+    "automatic_fallback_provider": false,
+    "fallback_requires_user_confirmation": true,
+    "approval_required": true
+  },
+  "publishing": {
+    "automatic_upload_after_explicit_approval": true,
+    "automatic_metadata": true,
+    "automatic_cover": false,
+    "cover_choice_required": true,
+    "cover_choices": ["scrapbook-person-b", "user_provided"],
+    "automatic_publish_click": false,
+    "cover_template": "scrapbook-person-b",
+    "cover_ratio": "3:4",
+    "cover_resolution": "1080x1440"
+  },
+  "review": {
+    "run_after_hours": 72,
+    "run_24h_review": false,
+    "run_7d_review": false
+  },
+  "retention": {
+    "final_files": ["final.mp4", "voice.wav", "copy.md", "review.md"],
+    "preserve_original_media": true,
+    "automatic_reorganization": false,
+    "automatic_cleanup": false,
+    "automatic_finalize_commit": false
+  },
+  "safety": {
+    "max_auto_revision_rounds": 3,
+    "overwrite_legacy_workflow": false,
+    "move_legacy_projects": false,
+    "allow_live_upload_during_tests": false
+  }
+}

@@ -1,0 +1,49 @@
+# macOS
+.DS_Store
+
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+*credentials*
+*secret*
+
+# Runtime project data (not part of this workflow repository)
+/原始素材/
+/视频工作区/
+/视频分析/
+/日志/
+/草稿/
+/成片/
+/工具环境/
+/垃圾/
+/outputs/
+
+# Dependencies, caches and build artifacts
+node_modules/
+.venv/
+.uv-cache/
+.modelscope-cache/
+python/
+dist/
+.wrangler/
+.vinext/
+__pycache__/
+*.pyc
+*.log
+
+# Media, models and generated exports
+*.mp4
+*.mov
+*.MOV
+*.mkv
+*.wav
+*.aiff
+*.mp3
+*.onnx
+*.pt
+*.pth
+*.safetensors
+*.dmg
+*.zip

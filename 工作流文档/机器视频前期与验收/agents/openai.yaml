@@ -1,0 +1,4 @@
+interface:
+  display_name: "机器视频剪辑前准备与验收"
+  short_description: "把爆款心理与证据框架适配成原创机器文案，并完成剪前和成片验收。"
+  default_prompt: "Use $machine-video-preflight to adapt a verified viral framework into original machine-sales copy, lock the shot plan, and run mandatory final acceptance after editing."

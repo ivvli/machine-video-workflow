@@ -1,0 +1,4 @@
+interface:
+  display_name: "爆款卖机器视频分析"
+  short_description: "拆视频事实、原文案、观众心理和证据，提取可迁移爆款框架。"
+  default_prompt: "Use $viral-machine-video-analyzer to analyze this reference video's content, copy, audience psychology, proof chain, and extract a reusable framework without copying its wording."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "短视频自动生产总控"
+  short_description: "VoxCPM配音、脚本确认、帧场呈现与发布门槛"
+  default_prompt: "使用 $short-video-autopilot 从环境预检开始，依次等待我确认文案、配音、剪辑脚本、上传动作和封面来源。"
